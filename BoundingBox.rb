@@ -26,19 +26,13 @@ class BoundingBox
     @y_pos
   end
 
-  # def contains_point?(x,y)
-  #   if (x < (@x_pos + width) && x > @x_pos) && (y < (@y_pos + height) && y > @y_pos)
-  #     true
-  #   else
-  #     false
-  #   end
-  # end
-
-# left returns the left edge of the box.
-# right returns the right edge of the box.
-# top returns the top edge of the box.
-# bottom returns the bottom edge of the box.
-# contains_point?(x, y)
+  def contains_point?(x,y)
+    if (x <= (@x_pos + width) && x >= @x_pos) && (y <= (@y_pos + height) && y >= @y_pos)
+      true
+    else
+      false
+    end
+  end
 
 end
 
@@ -47,3 +41,9 @@ end
 # print b.right
 # print b.top
 # print b.bottom
+# print b.contains_point?(20.0, 20.0)
+# print b.contains_point?(5.0, 10.0)
+# print b.contains_point?(30.0, 60.0)
+# print b.contains_point?(0.0, 0.0)
+# print b.contains_point?(20.0, 100.0)
+# print b.contains_point?(50.0, 20.0)
