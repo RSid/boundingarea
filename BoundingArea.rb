@@ -1,0 +1,3 @@
+class BoundingArea
+
+end
